@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faizan Ghafoor | Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: rgba(30, 41, 59, 0.7);
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent: #38bdf8;
+            --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #818cf8 100%);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+            overflow-x: hidden;
+            background-image: 
+                radial-gradient(at 10% 20%, rgba(56, 189, 248, 0.1) 0px, transparent 50%),
+                radial-gradient(at 90% 80%, rgba(129, 140, 248, 0.1) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 80px 20px 40px;
+            position: relative;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 12px;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        header p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            font-weight: 400;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        section {
+            background: var(--card-bg);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        section:hover {
+            border-color: rgba(56, 189, 248, 0.3);
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            width: 8px;
+            height: 24px;
+            background: var(--accent-gradient);
+            border-radius: 4px;
+        }
+
+        .about-text {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 24px;
+        }
+
+        .card-item {
+            background: rgba(15, 23, 42, 0.4);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+        }
+
+        .card-item h3 {
+            font-size: 1.15rem;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .meta {
+            font-size: 0.9rem;
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-weight: 500;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 8px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .skill-badge {
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .pub-item {
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+
+        .pub-item strong {
+            color: var(--text-primary);
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-gradient);
+            color: #0f172a;
+            padding: 14px 32px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 10px 20px -5px rgba(56, 189, 248, 0.3);
+            transition: opacity 0.2s ease, transform 0.2s ease;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        @media (min-width: 768px) {
+            header h1 { font-size: 3.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Faizan Ghafoor</h1>
+        <p>Specialist Procurement & Research Professional | MS Accounting and Finance</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- Objective / About -->
+        <section>
+            <h2>Objective & Profile</h2>
+            <p class="about-text">
+                Research-oriented and motivated individual seeking to advance academic excellence and professional impact through innovation and scholarly contribution. With extensive expertise in end-to-end procurement, supply chain operations, and financial analytics, I combine quantitative rigor with strategic execution.
+            </p>
+        </section>
+
+        <!-- Education -->
+        <section>
+            <h2>Academic Background</h2>
+            <div class="card-item">
+                <h3>MS Accounting and Finance</h3>
+                <div class="meta">University of Central Punjab, Lahore | 2021 – 2023 (CGPA: 3.17/4.00)</div>
+                <p class="about-text" style="font-size: 0.95rem;">Focus areas: Accounting, Taxation, Management, and Strategic Finance.</p>
+            </div>
+            <div class="card-item">
+                <h3>Bachelors of Business Administration (BBA)</h3>
+                <div class="meta">Islamia University of Bahawalpur | 2017 – 2021 (CGPA: 3.33/4.00)</div>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section>
+            <h2>Professional Experience</h2>
+            
+            <div class="card-item">
+                <h3>Specialist Procurement</h3>
+                <div class="meta">Systems Ltd | Oct 2025 – Present | Lahore, Pakistan</div>
+                <ul>
+                    <li>Managed end-to-end procurement workflows, strategic sourcing, supplier selection, and rigorous contract negotiations.</li>
+                    <li>Developed and monitored inventory control systems and monthly stock projection dashboards.</li>
+                    <li>Leveraged Microsoft Dynamics and SAP Concur for streamlined operations and total financial audit compliance.</li>
+                </ul>
+            </div>
+
+            <div class="card-item">
+                <h3>Procurement Category Specialist (Remote)</h3>
+                <div class="meta">Allied Solutions | Feb 2024 – Sep 2025 | Lahore, Pakistan</div>
+                <ul>
+                    <li>Handled strategic IT procurement for hardware, enterprise software, SaaS subscriptions, and cloud infrastructure.</li>
+                    <li>Negotiated pricing terms, SLAs, and license agreements achieving substantial year-over-year cost reductions.</li>
+                </ul>
+            </div>
+
+            <div class="card-item">
+                <h3>Finance Officer</h3>
+                <div class="meta">Ghani Ceramic Ltd. | Dec 2022 – Jan 2024 | Lahore, Pakistan</div>
+                <ul>
+                    <li>Executed Letters of Credit (LCs) and managed complex import documentation with banking and regulatory institutions.</li>
+                    <li>Handled regular financial reconciliations, vendor payment tracking, and cash-flow optimizations.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Selected Publications -->
+        <section>
+            <h2>Selected Publications & Research</h2>
+            <div class="pub-item">
+                <p><strong>Determinants of Liquidity Risk Management in Microfinance Institutions</strong><br>
+                Hameed, A., & Ghafoor, F. (2022). [Journal of Contemporary Business and Islamic Finance (JCBIF)](https://journals.iub.edu.pk/index.php/jcbif/article/download/579/236), 2(1), 86–93.</p>
+            </div>
+            <div class="pub-item" style="margin-bottom: 0;">
+                <p><strong>Use of Artificial Intelligence in the Banking Industry: A Case Study of Pakistan</strong><br>
+                Zulfiqar, N., Ghafoor, F., Idrees, m., & Raza, K. (2024). [Review of Applied Management and Social Sciences (RAMSS)](https://ramss.spcrd.org/index.php/ramss/article/view/394), 7(4), 467–481.</p>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section>
+            <h2>Technical & Analytical Skills</h2>
+            <div class="skills-container">
+                <span class="skill-badge">Procurement & Supply Chain</span>
+                <span class="skill-badge">SAP Concur & MS Dynamics</span>
+                <span class="skill-badge">Financial Analysis & LCs</span>
+                <span class="skill-badge">SPSS & STATA</span>
+                <span class="skill-badge">Python</span>
+                <span class="skill-badge">SQL & Tableau</span>
+                <span class="skill-badge">Academic Research Writing</span>
+                <span class="skill-badge">SEO & Digital Analytics</span>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section style="text-align: center;">
+            <h2>Get in Touch</h2>
+            <p class="about-text" style="margin-bottom: 20px;">Ready to connect for academic opportunities, admissions, or global collaborations.</p>
+            <div class="btn-container">
+                <a href="mailto:fghafoor369@gmail.com" class="btn">Send an Email</a>
+            </div>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Faizan Ghafoor. Built for European Academic & Professional Standards.</p>
+    </footer>
+
+</body>
+</html>
